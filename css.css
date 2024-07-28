@@ -1,0 +1,816 @@
+* {
+    margin: 1;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+            background-image:url(img/bg\(1\).png) ;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #050D1A;
+            z-index: -1;
+            background-size: cover;
+            background-attachment: fixed;
+            color: rgb(255, 255, 255);
+            /*font-family: 'Courier New', Courier, monospace;*/
+            width: 100%;
+            line-height: 1.7em;
+            margin: 0%;
+      
+}
+.face {
+    height: 50px;
+    position: relative;
+    left: 10px;
+}
+
+
+
+          
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background: rgb(0, 0, 0);
+    height: 80px;
+    margin-bottom: -10px;
+    box-shadow: 2px 3px 15px rgb(0, 0, 0); 
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+.dlist a {
+    padding: 20px;
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 16px;
+}
+.list{
+    color: rgb(255, 255, 255);
+    transition:color 0.5s ease;
+    position: relative;
+}
+.list:hover{
+
+    color: coral;
+   
+}
+
+.dlist{
+    position: relative;
+}
+
+.list:active::after , .list:hover::after {
+content: '';
+background-color: coral;
+position:absolute ;
+width: 60%;
+    height: 2px;
+    bottom: 10px;
+    left: 20px;
+}
+
+.button{
+    border: 2px solid coral;
+    padding: 15px;
+    border-radius: 5px ;
+    background-color: #000000;
+    color: coral;}
+    .button:hover{
+        box-shadow:0 0 8px rgb(255, 255, 255) inset ;
+            border-color: transparent; 
+            color: rgb(255, 255, 255);
+            background: transparent;
+            cursor: pointer;
+            animation: button 2s ease-in-out 0s infinite alternate both;
+    }
+
+.btny {
+    
+    cursor: pointer;
+    display: block;
+    font-size:20px;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px; 
+    position: relative;
+    width: 100%; 
+
+    
+  
+    
+    @media(min-width: 600px) {
+      margin: 0 1em 2em;
+    }
+    
+    
+    
+  }
+  
+  .btny {
+    background: darken(rgb(0, 0, 0), 1.5%);
+    font-weight: 800;
+    
+
+    svg {
+      height: 45px;
+      left: 0;
+      position: absolute;
+      top: 0; 
+      width: 100%; 
+    }
+    
+    rect {
+      fill: none;
+      stroke: coral;
+      stroke-width: 3;
+      stroke-dasharray: 422, 0;
+      transition: all 0.35s linear;
+      
+    }
+  }
+  
+  .btny:hover {
+    background: rgba(red, 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: coral;
+    
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+  
+    
+.break1{
+    position: relative;
+    clear: both;
+    background-color: rgb(255, 0, 0);
+    top: 50px;
+    width: 90%;
+}
+
+
+li {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.Alist {
+    display:flex;
+    align-items:start;    
+    left: 100px;
+    list-style: none;
+}
+
+
+
+#amenu{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: inline;
+}
+
+.sidebar{
+  
+    background-color: #000000;
+    opacity: 0.8;
+    position: relative;
+    top: 10px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.side{
+    display: flex;
+    flex-direction: column;  
+    
+    }
+
+    
+   
+.side a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    position: relative;
+    
+}
+
+.sidebar ul li{
+    padding: 30px;
+    width: 100%;
+    border: 10px , beige;
+}
+
+
+#cancel{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    left: 10px;
+    
+}
+
+.side a:active::after , .side a:hover::after {
+    content: '';
+    background-color: rgb(253, 135, 92);
+    opacity: 0.8;
+    z-index: -1;
+    position:absolute ;
+    width: 100%;
+        height: 50px;
+        bottom: 10px;
+        left: 0%;
+        border-radius: 5px;
+    }
+
+    
+
+    @media(max-width:1000px){
+.list{
+    display: none}
+    }
+    @media(min-width:1000px){
+        #amenu{
+            display: none;
+        }
+    }
+
+    .coin{
+        left: 4%;
+        position: relative;
+        top: 80px;
+        height: 400px;
+        animation: button 3s ease-in-out 0s infinite alternate both;
+    
+    }
+    .write{
+    text-align: left;
+    float: right;
+    padding: 30px;
+    }
+    .write h1{
+        font-weight:bolder;
+        font-size: 45px;
+        text-align: center;
+        line-height: 50px;
+        color: rgb(232, 75, 40);
+
+    }
+    .write h4{
+        text-align: center;
+    }
+    .pribtn ,  .tet-btn {
+        padding: 10px;
+        border-radius: 5px;
+        border: white solid 2px;
+        padding:15px;
+        /*opacity: 0.6;
+        background-color: #000000;*/
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 5px;
+        
+    }
+    .sec-btn{
+        background: rgb(253,29,29);
+background: -moz-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+background: linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+
+        padding:15px;
+        border-radius: 5px;
+        border: 2px transparent;
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+      
+        margin: 5px;
+    }
+    
+
+    .btns{
+       
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .btnss{
+        position:relative;
+        top: 50px;
+    }
+    .sec-btn:hover{
+        box-shadow:0 0 8px rgb(255, 255, 255) inset ;
+            border-color:  white; 
+            color: rgb(255, 255, 255);
+            background: transparent;
+            cursor: pointer;
+            animation: button 2s ease-in-out 0s infinite alternate both;
+    }
+
+    .pribtn:hover , .tet-btn:hover{
+        border-color: coral;
+        color: coral;
+        cursor: pointer;
+        animation: button 2s ease-in-out 0s infinite alternate both;
+    }
+    
+    @keyframes button{
+        0%{
+            transform: translateY(0px)
+        }
+        50%{
+            transform: translateY(-10px)
+        }
+        100%{
+            transform: translateY(0px)
+        }
+        
+    }
+    @keyframes coin{
+        0%{
+            transform: translateY(-20px)
+        }
+        50%{
+            transform: translateY(-10px)
+        }
+        100%{
+            transform: translateY(-20px)
+        }
+    }
+
+   .writing2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    clear: both;
+    padding: 20px;
+   }
+   .writing2 span{
+    color: coral;
+    font-weight: 1000;
+    font-size: 25px;
+   }
+
+    .writing2 h2{
+        font-size: 70px;
+        line-height: 1.3;
+        text-align: left;
+    }
+    .writing2 p{
+        text-align: left;
+    }
+    
+   .trump1{
+    position: relative;
+    width: 400px;
+    top: 50px;
+   }
+   .writing2 button{
+    position: relative;
+    top: 40px;
+    background: rgb(253,29,29);
+background: -moz-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+background: linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fd1d1d",endColorstr="#ff7f50",GradientType=1);
+        padding:9px;
+        border-radius: 5px;
+        border: none;
+        color: rgb(255, 255, 255);
+        width: 400px;
+        font-size: 19px;
+        font-family: 'Courier New', Courier, monospace;
+        box-shadow: inset 10px;
+        
+   }
+
+   .writing2 button:hover{
+    box-shadow:0 0 8px rgb(255, 255, 255) inset ;
+    border-color:  white; 
+    color: rgb(255, 255, 255);
+    background: transparent;
+    cursor: pointer;
+   animation: button 2s ease-in-out 0s infinite alternate both;
+   }
+   .trade{
+    position: relative;
+    top:150px;
+    margin-bottom: 400px;
+   }
+   .trade h2 , p{
+    text-align: center;
+   }
+   .trade span{
+    color: coral;
+    font-size: larger;
+   }
+   
+   .ray{
+    width: 130px;
+   }
+   .coinmarket{
+    width: 150px;
+   }
+   .dex1{
+    width: 60px;
+   }
+   .dex{
+    width: 150px;
+   }
+   .marketimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   }
+   .marketimg div:nth-child(1) ,.marketimg div:nth-child(3),.marketimg div:nth-child(2) {
+    border: rgb(255, 255, 255) solid 1px;
+    border-radius:10px;
+    padding: 15px  60px;
+    margin: 10px;
+    transition: 1s;
+     }
+    
+     .marketimg div:nth-child(4){
+        border: rgb(255, 255, 255) solid 1px;
+    border-radius:10px;
+    padding: 20px  110px;
+    margin: 10px;
+    transition: 1s;
+     }
+     .marketimg div:hover{
+        transform: translateY(-15px)  scale(1.05) ;
+        background-color: rgb(255, 255, 255,.2);
+        border: solid white 1.5px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        border:1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 0px 8px  rgba(255, 255, 255);
+        
+     }
+     @keyframes dexentry{
+     0%{
+        opacity: 0;
+        transform: translateY(500px);  
+     }
+     50%{
+        transform: translateY(-30px) ;
+     }
+     100%{
+        transform: translateY(0px) ;
+     }
+     }
+     
+
+     .allchart{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        position: relative;
+        top: -100px;
+     }
+     
+     .chart1{
+        background-color: rgb(255, 255, 255,.2);
+        border: solid white 1.5px;
+        width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border:1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.37);
+        margin: 10px;
+        transition: 0.5s ease-out;
+        
+     }
+     .chart1:hover , .chart2:hover{
+        transform: translateY(-15px)  scale(1.02) ;
+        background-color: rgb(255, 255, 255,.2);
+        border: solid white 1.5px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        border:1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 0px 8px  rgba(255, 255, 255);
+     }
+     
+    
+
+     .chart1 div{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+     }
+     .chart1 div:hover{
+
+        color: coral;
+     }
+     
+     .chart1 i{
+        position: relative;
+        top: 30px;
+     }
+     .chart2{
+        
+        /*margin-top: 20px; put in media*/
+        background-color: rgb(255, 255, 255,.2);
+        border: solid white 1.5px;
+        width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border:1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.37);
+        margin: 10px;
+        transition: 0.5s ease-out;
+     }
+     .chart2 div:hover{
+        
+        color: coral;
+     }
+     .chart2 h3{
+        display: inline-flex;
+     }
+   
+    
+    .chart2 li{
+        margin: 20px;
+        list-style-type:circle;
+        
+       
+     }
+     .chart2 h2{
+        color: coral;
+     }
+     .chart2 i{
+        position: absolute;
+        right: 10px;
+        margin-top: 22px;
+        color: coral;
+        opacity: 0.4;
+     }
+     .block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+     }
+     .wrld{
+        position:relative;
+     }
+     .world{
+        width: 500px;
+        opacity: 0.5;
+        margin-left: 40px;
+        margin-top: 40px;
+        animation: rotate 200s ease-in-out 1s infinite alternate both;
+        
+     }
+     .eth{
+        width: 100px;
+        position:absolute;
+        opacity: 0.7;
+        left: 140px;
+        top: 90px;
+        animation: float2 100s ease-in-out 3s infinite alternate both;
+        
+     }   
+      
+        
+     @keyframes rotate {
+        0% {
+            transform: rotateZ(0deg) ;
+        }
+        50% {
+            transform: rotateZ(180deg) ;
+            }
+        
+        100% { 
+            transform: rotateZ(360deg);
+        }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateY(100px) ;
+            }
+            20% {
+                    transform: translateX(-20px) ;
+                }
+            
+            40% { 
+                    transform:  translateY(200px);
+            }
+            60%{
+                transform: translateX(300px);
+            }
+            80%{
+                transform: translateY(100px);
+            }
+            100%{
+                transform: translateX(300px);
+            }
+        }
+        
+
+
+        
+     
+
+     .phantomdiv{
+display: flex;
+border-radius: 5px;
+box-shadow: inset 0 0 8px rgb(255, 255, 255);
+
+     }
+     .phantomdiv:hover{
+        animation: button 3s ease-in-out 0s infinite alternate both;
+     }
+     .phantomdiv:nth-child(2){
+        position: relative;
+        top: 10px;
+     }
+     .rite{
+        margin: 20px;
+     }
+    .rite button{
+        position: relative;
+        top: 40px;
+        background: rgb(253,29,29);
+    background: -moz-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+    background: linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(255,127,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fd1d1d",endColorstr="#ff7f50",GradientType=1);
+            border-radius: 5px;
+            border: none;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: inset  0 0 6px rgb(255, 255, 255);
+            padding: 15px;
+            margin: 5px;
+            font-weight: 700;
+    }
+
+    .rite button:hover{
+        cursor: pointer;
+        color: white;
+        border-color: white;
+        background: transparent;
+        animation: button 3s ease-in-out 0s infinite alternate both;
+    }
+    
+.phantom{
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px;
+}
+.btnsss{
+margin-left: 12%;
+}
+.footer{
+    position: relative;
+     top: 100px;  
+     background-color: black;
+     border:1px solid rgba(255, 255, 255, 0.18);
+     box-shadow:  0 10px 10px 0 rgba(0, 0, 0, 0.37);
+     
+     
+     padding: 20px;
+     border-radius: 20px 20px 0px 0px;
+    
+
+}
+.footer div:nth-child(1) img{
+    width: 380px;
+    margin-left: 11% ;
+}
+.footer a{
+    color: aliceblue;
+    text-align: center;
+}
+.link{
+   display: flex;
+   justify-content: center;
+}
+.link a{
+    padding: 25px;
+}
+.telegram{
+    margin-left:45% ;
+    margin-top: 5px;
+    transition: 2s;
+}
+.telegram:hover{
+    transform: rotateZ(360deg) ;
+    box-shadow: 0 0 8px white;
+    border-radius: 50px;
+}
+.break2{
+    width: 400px;
+    color: coral;
+    
+}
+.break3{
+width:15% ;
+}
+@media(min-width:800px){
+    .footer{
+        position: relative;
+         top: 100px;
+         width: 70%;
+         left: 15%;
+         background-color: black;
+         border:1px solid rgba(255, 255, 255, 0.18);
+         box-shadow:  0 10px 10px 0 rgba(0, 0, 0, 0.37);
+         
+         
+         padding: 20px;
+         border-radius: 20px 20px 0px 0px;
+    }
+    .footer div:nth-child(1) img{
+    width: 45%;
+    margin-left: 25% ;
+}
+.footer a{
+    color: aliceblue;
+    text-align: center;
+}
+.link{
+   display: flex;
+   justify-content: center;
+}
+.link a{
+    padding: 9px;
+    transition:color 0.5s ease;
+}
+
+.telegram{
+    margin-left:46% ;
+}
+.break2{
+    width: 400px;
+    color: coral;
+    
+}
+.break3{
+width:10% ;
+margin-left: 44%;
+}
+    }
+
+    .abts{
+        color: rgb(255, 255, 255);
+        transition:color 0.5s ease;
+        position: relative;
+    }
+    .link a:hover{
+        
+        color: coral;
+       
+    }
+
+.abts:active::after , .abts:hover::after {
+        content: '';
+        background-color: coral;
+        position:absolute ;
+        width: 60%;
+            height: 2px;
+            bottom: 10px;
+            left: 20px;
+           
+        } 
+       
